@@ -1,40 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ToDo List App
 
-## Getting Started
+Esta es una aplicación de lista de tareas (ToDo List) construida con React y Next.js. Permite a los usuarios crear, marcar como completadas y eliminar tareas de manera sencilla y eficiente.
 
-First, run the development server:
+## Tecnologías utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- React
+- Next.js
+- Tailwind CSS
+- Axios (para consumir la API de prueba)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Requisitos
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Node.js versión 18.17.0 o superior
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Instalación y ejecución
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Clona este repositorio en tu máquina local.
+2. Navega hasta el directorio del proyecto.
+3. Instala las dependencias ejecutando el siguiente comando:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `npm install`
 
-## Learn More
+4. Una vez instaladas las dependencias, puedes iniciar la aplicación en modo de desarrollo con el siguiente comando:
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación en funcionamiento.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Detalles adicionales
 
-## Deploy on Vercel
+- La aplicación consume una API de prueba (JSONPlaceholder) para simular la interacción con un servidor y almacenar las tareas. En una aplicación real, se utilizaría una base de datos o un servicio de backend para almacenar y recuperar los datos de manera persistente.
+- Se han aplicado estilos CSS personalizados y se ha utilizado la biblioteca Tailwind CSS para lograr un diseño atractivo y responsive.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Problemas encontrados
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Durante el desarrollo de esta aplicación, me enfrente a varios desafíos:
+
+1. **Gestión del estado**: Uno de los principales retos fue mantener una gestión adecuada del estado de la aplicación, especialmente al manejar la actualización de las tareas y el filtrado de las mismas.
+
+2. **Consumo de API**: Aunque se utilizó una API de prueba, hubo algunos problemas relacionados con la generación de IDs únicos para las nuevas tareas, lo que causó algunos errores al marcar tareas como completadas o eliminarlas.

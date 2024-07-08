@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  font-family: 'Poppins', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +19,50 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #141414;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+/* Ocultar la barra de desplazamiento */
+::-webkit-scrollbar {
+  display: none;
+  /* Ocultar la barra de desplazamiento en navegadores WebKit */
+}
+
+/* Estilos para el desplazamiento suave */
+html {
+  scroll-behavior: smooth;
+  /* Desplazamiento suave en todos los navegadores */
+}
+
+/* Mostrar la barra de desplazamiento solo cuando se necesite */
+::-webkit-scrollbar {
+  width: 8px;
+  /* Ancho de la barra de desplazamiento */
+  height: 8px;
+  /* Altura de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Color del pulgar (barra de desplazamiento) */
+  border-radius: 4px;
+  /* Radio de borde del pulgar */
 }
