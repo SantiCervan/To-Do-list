@@ -11,13 +11,15 @@ const TaskList = ({ tasks, handleToggleTaskCompletion, handleDeleteTask, filter 
               checked={task.completed}
               onChange={() => handleToggleTaskCompletion(task.id)}
               className="mr-4 cursor-pointer"
+              data-cy="task-checkbox"
             />
-            <div className='w-[80%] sm:w-[90%]'>
-              <span className={`transition-colors ${task.completed && 'line-through text-neutral-500'}`}>{task.title}</span>
+            <div data-cy="task-item-div-span" className='w-[80%] sm:w-[90%]'>
+              <span data-cy="task-item-span" className={`transition-colors ${task.completed && 'line-through text-neutral-500'}`}>{task.title}</span>
             </div>
             <button
               className="delete-task text-white rounded-md w-8 h-8 flex items-center justify-center text-2xl hover:bg-red-900 transition-colors"
               onClick={() => handleDeleteTask(task.id)}
+              data-cy="delete-task"
             >
               <Image src='/icons/basura.svg' alt='eliminar' width={24} height={24} />
             </button>
