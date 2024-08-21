@@ -15,7 +15,7 @@ describe('Todo List App', () => {
   it('should create a new task', () => {
     const newTaskText = 'Nueva tarea de prueba';
     cy.get('[data-cy="div-add-task"] > [data-cy="add-task-form"] > [data-cy="add-task-input"]').should('be.visible').type(newTaskText);
-    cy.get('.hidden > .justify-between > [data-cy="add-task-button"]').click();
+    cy.get('[data-cy="div-add-task"] > [data-cy="add-task-form"] > [data-cy="add-task-button"]').click();
     cy.get('[data-cy="task-list"] > :nth-child(1)').should('contain', newTaskText);
   });
 
