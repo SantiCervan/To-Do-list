@@ -14,7 +14,7 @@ const Navbar = ({ handleAddTask }) => {
         </Link>
       </div>
       {router.pathname === '/' &&
-        <div className='hidden md:flex w-1/3'>
+        <div className='hidden md:flex w-1/3' data-cy="div-add-task">
           <AddTask handleAddTask={handleAddTask} />
         </div>
       }
